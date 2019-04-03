@@ -6,6 +6,7 @@ export default {
     guide: 'Guide',
     permission: 'Permission',
     pagePermission: 'Page Permission',
+    rolePermission: 'Role Permission',
     directivePermission: 'Directive Permission',
     icons: 'Icons',
     components: 'Components',
@@ -22,6 +23,7 @@ export default {
     componentMixin: 'Mixin',
     backToTop: 'BackToTop',
     dragDialog: 'Drag Dialog',
+    dragSelect: 'Drag Select',
     dragKanban: 'Drag Kanban',
     charts: 'Charts',
     keyboardChart: 'Keyboard Chart',
@@ -41,8 +43,6 @@ export default {
     dragTable: 'Drag Table',
     inlineEditTable: 'Inline Edit',
     complexTable: 'Complex Table',
-    treeTable: 'Tree Table',
-    customTreeTable: 'Custom TreeTable',
     tab: 'Tab',
     form: 'Form',
     createArticle: 'Create Article',
@@ -55,19 +55,22 @@ export default {
     excel: 'Excel',
     exportExcel: 'Export Excel',
     selectExcel: 'Export Selected',
+    mergeHeader: 'Merge Header',
     uploadExcel: 'Upload Excel',
     zip: 'Zip',
+    pdf: 'PDF',
     exportZip: 'Export Zip',
     theme: 'Theme',
     clipboardDemo: 'Clipboard',
-    i18n: 'I18n'
+    i18n: 'I18n',
+    externalLink: 'External Link'
   },
   navbar: {
     logOut: 'Log Out',
     dashboard: 'Dashboard',
     github: 'Github',
-    screenfull: 'screenfull',
-    theme: 'theme'
+    theme: 'Theme',
+    size: 'Global Size'
   },
   login: {
     title: 'Login Form',
@@ -83,8 +86,14 @@ export default {
     github: 'Github Repository'
   },
   permission: {
+    addRole: 'New Role',
+    editPermission: 'Edit Permission',
     roles: 'Your roles',
-    switchRoles: 'Switch roles'
+    switchRoles: 'Switch roles',
+    tips: 'In some cases it is not suitable to use v-permission, such as element Tab component or el-table-column and other asynchronous rendering dom cases which can only be achieved by manually setting the v-if.',
+    delete: 'Delete',
+    confirm: 'Confirm',
+    cancel: 'Cancel'
   },
   guide: {
     description: 'The guide page is useful for some people who entered the project for the first time. You can briefly introduce the features of the project. Demo is based on ',
@@ -132,21 +141,32 @@ export default {
   },
   excel: {
     export: 'Export',
-    selectedExport: 'Export selected items',
+    selectedExport: 'Export Selected Items',
     placeholder: 'Please enter the file name(default excel-list)'
   },
   zip: {
     export: 'Export',
     placeholder: 'Please enter the file name(default file)'
   },
+  pdf: {
+    tips: 'Here we use window.print() to implement the feature of downloading pdf.'
+  },
   theme: {
-    change: 'Theme change',
+    change: 'Change Theme',
     documentation: 'Theme documentation',
     tips: 'Tips: It is different from the theme-pick on the navbar is two different skinning methods, each with different application scenarios. Refer to the documentation for details.'
   },
   tagsView: {
+    refresh: 'Refresh',
     close: 'Close',
     closeOthers: 'Close Others',
     closeAll: 'Close All'
+  },
+  settings: {
+    title: 'Page style setting',
+    theme: 'Theme Color',
+    tagsView: 'Open Tags-View',
+    fixedHeader: 'Fixed Header',
+    sidebarLogo: 'Sidebar Logo'
   }
 }

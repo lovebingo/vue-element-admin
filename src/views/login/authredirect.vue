@@ -1,10 +1,15 @@
 <script>
-  export default {
-    name: 'authredirect',
-    created() {
-      const hash = window.location.search.slice(1)
-      window.opener.location.href = window.location.origin + '/login#' + hash
+export default {
+  name: 'Authredirect',
+  created() {
+    const hash = window.location.search.slice(1)
+    if (window.localStorage) {
+      window.localStorage.setItem('x-admin-oauth-code', hash)
       window.close()
     }
+  },
+  render: function(h) {
+    return h() // avoid warning message
   }
+}
 </script>
